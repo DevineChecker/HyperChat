@@ -3,7 +3,16 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import { Bot, User } from "lucide-react";
-import type { Message } from "@/lib/groq";
+
+// Preprocess LaTeX delimiters: \[...\] → $$...$$ and \(...\) → $...$
+function preprocessLatex(content: string): string {
+  // Convert \[...\] to $$...$$
+  content = content.replace(/\\\[([\s\S]*?)\\\]/g, (_, inner) => `$$${inner}$$`);
+  // Convert \(...\) to $...$
+  content = content.replace(/\\\(([\s\S]*?)\\\)/g, (_, inner) => `$${inner}$`);
+  return content;
+}
+
 
 export function ChatMessage({ message }: { message: Message }) {
   const isUser = message.role === "user";
