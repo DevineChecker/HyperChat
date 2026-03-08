@@ -268,7 +268,7 @@ const Index = () => {
             ) : (
               <div className="max-w-3xl mx-auto">
                 {messages.map((m, i) => (
-                  <ChatMessage key={i} message={m} />
+                  <ChatMessage key={i} message={m} index={i} onRollback={handleRollback} onRegenerate={handleRegenerate} currentModel={model} />
                 ))}
                 {isLoading && messages[messages.length - 1]?.role === "user" && <TypingIndicator />}
               </div>
