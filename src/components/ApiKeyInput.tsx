@@ -14,7 +14,7 @@ export function ApiKeyInput({ onSave }: { onSave: (key: string) => void }) {
             <Key className="w-8 h-8 text-primary" />
           </div>
           <h1 className="text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-heading)" }}>
-            Hyperchat
+            HyperChat
           </h1>
           <p className="text-muted-foreground text-sm">
             Enter your Groq API key to start chatting with lightning-fast AI models.
