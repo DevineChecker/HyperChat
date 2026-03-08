@@ -2,7 +2,9 @@ import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
-import { Bot, User } from "lucide-react";
+import { Bot, User, Copy, Check } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 import type { Message } from "@/lib/groq";
 
 // Preprocess LaTeX delimiters: \[...\] → $$...$$ and \(...\) → $...$
