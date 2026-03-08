@@ -54,9 +54,10 @@
   * {
     @apply border-border;
   }
-  body {
+  html, body {
     @apply bg-background text-foreground;
     font-family: 'Space Grotesk', sans-serif;
+    overflow: hidden;
   }
 }
 
