@@ -176,7 +176,7 @@ const Index = () => {
             <div className="flex items-center gap-3">
               <SidebarTrigger className="text-muted-foreground hover:text-foreground" />
               <h1 className="text-lg font-bold text-primary" style={{ fontFamily: "var(--font-heading)" }}>
-                GroqChat
+                Hyperchat
               </h1>
               <ModelSelector value={model} onChange={setModel} />
             </div>
