@@ -1,15 +1,13 @@
 export const GROQ_MODELS = [
   { id: "llama-3.3-70b-versatile", name: "LLaMA 3.3 70B", description: "Most capable general model" },
   { id: "llama-3.1-8b-instant", name: "LLaMA 3.1 8B", description: "Fast & efficient" },
-  { id: "llama-3.2-1b-preview", name: "LLaMA 3.2 1B", description: "Ultra lightweight" },
-  { id: "llama-3.2-3b-preview", name: "LLaMA 3.2 3B", description: "Lightweight preview" },
-  { id: "llama-3.2-11b-vision-preview", name: "LLaMA 3.2 11B Vision", description: "Vision capable" },
-  { id: "llama-3.2-90b-vision-preview", name: "LLaMA 3.2 90B Vision", description: "Large vision model" },
-  { id: "mixtral-8x7b-32768", name: "Mixtral 8x7B", description: "MoE architecture, 32k ctx" },
-  { id: "gemma2-9b-it", name: "Gemma 2 9B", description: "Google's efficient model" },
-  { id: "llama-guard-3-8b", name: "LLaMA Guard 3 8B", description: "Safety classifier" },
-  { id: "deepseek-r1-distill-llama-70b", name: "DeepSeek R1 70B", description: "Reasoning model" },
+  { id: "openai/gpt-oss-120b", name: "GPT-OSS 120B", description: "OpenAI flagship open-weight" },
+  { id: "openai/gpt-oss-20b", name: "GPT-OSS 20B", description: "OpenAI fast & affordable" },
   { id: "meta-llama/llama-4-scout-17b-16e-instruct", name: "LLaMA 4 Scout 17B", description: "Latest LLaMA 4" },
+  { id: "qwen/qwen3-32b", name: "Qwen3 32B", description: "Reasoning & math" },
+  { id: "moonshotai/kimi-k2-instruct-0905", name: "Kimi K2", description: "Moonshot AI, 262k ctx" },
+  { id: "groq/compound", name: "Groq Compound", description: "Agentic with web search" },
+  { id: "groq/compound-mini", name: "Groq Compound Mini", description: "Lightweight agentic" },
 ];
 
 export type Message = {
