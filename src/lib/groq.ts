@@ -9,7 +9,6 @@ export const GROQ_MODELS = [
   { id: "gemma2-9b-it", name: "Gemma 2 9B", description: "Google's efficient model" },
   { id: "llama-guard-3-8b", name: "LLaMA Guard 3 8B", description: "Safety classifier" },
   { id: "deepseek-r1-distill-llama-70b", name: "DeepSeek R1 70B", description: "Reasoning model" },
-  { id: "qwen-qwq-32b", name: "Qwen QwQ 32B", description: "Reasoning & math" },
   { id: "meta-llama/llama-4-scout-17b-16e-instruct", name: "LLaMA 4 Scout 17B", description: "Latest LLaMA 4" },
 ];
 
