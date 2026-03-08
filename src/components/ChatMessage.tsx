@@ -5,6 +5,13 @@ import "katex/dist/katex.min.css";
 import { Bot, User } from "lucide-react";
 import type { Message } from "@/lib/groq";
 
+// Preprocess LaTeX delimiters: \[...\] → $$...$$ and \(...\) → $...$
+function preprocessLatex(content: string): string {
+  content = content.replace(/\\\[([\s\S]*?)\\\]/g, (_, inner) => `$$${inner}$$`);
+  content = content.replace(/\\\(([\s\S]*?)\\\)/g, (_, inner) => `$${inner}$`);
+  return content;
+}
+
 export function ChatMessage({ message }: { message: Message }) {
   const isUser = message.role === "user";
 
@@ -29,7 +36,7 @@ export function ChatMessage({ message }: { message: Message }) {
             remarkPlugins={[remarkMath]}
             rehypePlugins={[rehypeKatex]}
           >
-            {message.content}
+            {preprocessLatex(message.content)}
           </ReactMarkdown>
         )}
       </div>
